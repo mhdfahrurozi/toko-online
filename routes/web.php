@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\CreateWAController;
 
 /*
 |--------------------------------------------------------------------------
@@ -19,3 +20,5 @@ Route::get('/', function () {
 Route::get('/test', function () {
     return view('welcome');
 });
+
+Route::get('/URL-Spesial', [CreateWAController::class, 'generate']);
